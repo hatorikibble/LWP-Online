@@ -1,0 +1,17 @@
+abstract: Does your process have access to the web
+author: Adam Kennedy <adamk@cpan.org>
+build_requires: 
+  Test::More: 0.42
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: LWP-Online
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  Carp: 0
+  LWP::Simple: 0
+  perl: 5.005
+version: 0.01
