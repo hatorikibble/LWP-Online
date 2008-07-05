@@ -11,6 +11,11 @@ SYNOPSIS
       unless ( online('http') ) {
           die "No basic http access to the web";
       }
+  
+      # Special syntax for use in test scripts that need
+      # "real" access to the internet. Scripts will automatically
+      # skip if connection fails.
+      use LWP::Online ':skip_all';
 
 DESCRIPTION
     This module attempts to answer, as accurately as it can, one of the
@@ -82,6 +87,25 @@ DESCRIPTION
     of any kind, it is quite possible that some malicious person might proxy
     fake versions of sites that pass our content checks and then proceed to
     show you other bad pages.
+
+  Test Mode
+      use LWP::Online ':skip_all';
+
+    As a convenience when writing tests scripts base on Test::More, the
+    special ':skip_all' param can be provided when loading LWP::Online.
+
+    This implements the functional equivalent of the following.
+
+      BEGIN {
+        require Test::More;
+        unless ( LWP::Online::online() ) {
+          Test::More->import(
+            skip_all => 'Test requires a working internet connection'
+          );
+        }
+      }
+
+    The :skip_all special import flag can be mixed with regular imports.
 
 FUNCTIONS
   online
