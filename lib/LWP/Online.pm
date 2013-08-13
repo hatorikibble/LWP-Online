@@ -65,7 +65,7 @@ The nice thing about LWP::Online is that LWP deals with a whole range of
 different transports, and is very commonly installed. HTTP, HTTPS, FTP,
 and so on and so forth.
 
-Attempting to do a more generalised Net::Online that might also check for
+Attempting to do a more generalized Net::Online that might also check for
 SSH and so on would end up most likely having to install a whole bunch of
 modules that you most likely will never use.
 
@@ -79,7 +79,7 @@ overhead down to a minimum.
 
 That is, it's a problem that had no clean permanent solution, and for
 which you could just keep writing more and more functionality
-indefinitely, asymtopically approaching 100% correctness but never
+indefinitely, asymptotically approaching 100% correctness but never
 reaching it.
 
 And so this module is intended to do as good a job as possible, without
@@ -89,10 +89,10 @@ a reasonable level of memory overhead to load the code.
 
 It is thus understood the module will B<never> be perfect, and that if
 any new functionality is desired, it needs to be able to implemented by
-the person that desires the new behaviour, and in a reasonably small
+the person that desires the new behavior, and in a reasonably small
 amount of additional code.
 
-This module is also B<not> intended to compensate for malicious behaviour
+This module is also B<not> intended to compensate for malicious behavior
 of any kind, it is quite possible that some malicious person might proxy
 fake versions of sites that pass our content checks and then proceed
 to show you other bad pages.
@@ -338,7 +338,7 @@ apply your fix directly instead of submitting a patch, you are B<strongly>
 encouraged to do so as the author currently maintains over 100 modules
 and it can take some time to deal with non-Critical bug reports or patches.
 
-This will guarentee that your issue will be addressed in the next
+This will guarantee that your issue will be addressed in the next
 release of the module.
 
 If you cannot provide a direct test or fix, or don't have time to do so,
