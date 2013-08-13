@@ -150,10 +150,12 @@ BEGIN {
 		# These are some initial trivial checks.
 		# The regex are case-sensitive to at least
 		# deal with the "couldn't get site.com case".
-		'http://google.com/' => sub { /About Google/      },
-		'http://yahoo.com/'  => sub { /Yahoo!/            },
-		'http://amazon.com/' => sub { /Amazon/ and /Cart/ },
-		'http://cnn.com/'    => sub { /CNN/               },
+                'http://www.msftncsi.com/ncsi.txt' => sub { $_ eq 'Microsoft NCSI' },
+                'http://www.apple.com/library/test/success.html' => sub { $_ eq 'Sucsess' },
+		'http://www.google.com/' => sub { /About Google/      },
+		'http://www.yahoo.com/'  => sub { /Yahoo!/            },
+		'http://www.amazon.com/' => sub { /Amazon/ and /Cart/ },
+		'http://www.cnn.com/'    => sub { /CNN/               },
 	);
 }
 
